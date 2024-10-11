@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('newbackground.png'); 
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+p {
+    padding: 10px 20px;
+    background-color: #ffcc00; /* ашық алтын түс */
+    color: #000; /* текст*/
+    border: 2px solid #ff0000; 
+    cursor: pointer;
+    font-size: 15px; 
+    font-family: 'Courier New', Courier, monospace; 
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; /* Неоновый эффект вокруг текста */
+    transition: transform 0.3s ease;
+}
+
+p:hover {
+    transform: scale(1.1); 
+}
+#rollButton {
+    padding: 15px 30px;
+    background-color: #ff3300; 
+    color: #ffffff; 
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace; 
+    text-transform: uppercase;
+    border: 3px solid #ffcc00; 
+    border-radius: 10px; 
+    cursor: pointer;
+    
+    transition: all 0.3s ease;
+}
+
+
+
+#rollButton:hover {
+    background-color: #ffcc00; 
+    color: #000; 
+    transform: scale(1.1);
+   
+}

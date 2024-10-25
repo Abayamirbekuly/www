@@ -1,0 +1,54 @@
+/* Основные стили */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.xylophone {
+    display: flex;
+    flex-direction: row; /* Выстраивает клавиши в ряд */
+    gap: 5px; /* Промежуток между клавишами */
+}
+
+/* Стили клавиш */
+.key {
+    width: 50px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #FF9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.key:hover {
+    transform: scale(1.05); /* Увеличение клавиши при наведении */
+}
+
+/* Уникальные цвета для каждой клавиши */
+#keyC { background-color: #FF9999; }
+#keyD { background-color: #FFB266; }
+#keyE { background-color: #FFD966; }
+#keyF { background-color: #FFFF66; }
+#keyG { background-color: #B2FF66; }
+#keyA { background-color: #66FFB2; }
+#keyB { background-color: #66B2FF; }
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .key {
+        width: 40px;
+        height: 150px;
+    }
+}
+

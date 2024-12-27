@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fc;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .payment-options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f4f4f9;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .payment-option input {
+      display: none;
+    }
+
+    .payment-option img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .payment-option:hover {
+      background: #e3e7ff;
+      border-color: #6a11cb;
+    }
+
+    .total-amount {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Task Payment</h1>
+    <form>
+      <div class="form-group">
+        <label>Choose Payment Method</label>
+        <div class="payment-options">
+          <label class="payment-option">
+            <input type="radio" name="payment-method" value="online">
+            <img src="https://via.placeholder.com/40" alt="Online Payment">
+            <span>Online Payment (Wise, PayPal)</span>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" name="payment-method" value="credit-card">
+            <img src="https://via.placeholder.com/40" alt="Credit Card">
+            <span>Credit Card</span>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" name="payment-method" value="crypto">
+            <img src="https://via.placeholder.com/40" alt="Crypto">
+            <span>Cryptocurrency</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="total-amount">
+        Total Amount: <span>$200</span>
+      </div>
+
+      <button type="button"  onclick="window.location.href='congrad.html';" class="btn">Pay Now</button>
+    </form>
+  </div>
+</body>
+</html>

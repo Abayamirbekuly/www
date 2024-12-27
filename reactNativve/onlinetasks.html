@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks - Online & Offline</title>
+  <style>
+    /* Общие стили */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f9fafc;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+        color: #333;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #444;
+    }
+
+    /* Стили для задач */
+    .task {
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        margin: 20px 0;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .task:hover {
+        transform: scale(1.02);
+    }
+
+    .task img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+
+    .task-details {
+        flex: 1;
+    }
+
+    .task-details h3 {
+        font-size: 1.5em;
+        margin: 0 0 10px;
+        color: #444;
+    }
+
+    .task-details p {
+        margin: 5px 0;
+        color: #666;
+    }
+
+    .task-details .tag {
+        display: inline-block;
+        background: #0078ff;
+        color: #fff;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+
+    .task-details .price {
+        font-weight: bold;
+        color: #28a745;
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    .task-details .deadline {
+        font-size: 0.9em;
+        color: #e63946;
+        margin-top: 5px;
+    }
+
+    .apply-btn {
+        margin-top: 15px;
+        background-color: #ff7f50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .apply-btn:hover {
+        background-color: #e55e3a;
+    }
+
+    /* Стили для оффлайн задач */
+    .offline .task-details .tag {
+        background: #6c757d;
+    }
+
+    .offline .apply-btn {
+        background-color: #6c757d;
+    }
+
+    .offline .apply-btn:hover {
+        background-color: #5a6268;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+        .task {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .task img {
+            margin: 0 0 15px 0;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Available Tasks</h1>
+    
+    <!-- Раздел Онлайн задач -->
+    <section id="online-tasks">
+      <h2>Online Tasks</h2>
+      
+      <!-- Задача 1 Онлайн -->
+      <div class="task">
+        <img src="webdev.png" alt="Web Dev Project">
+        <div class="task-details">
+          <h3>Web Dev Project</h3>
+          <p>Create a responsive website for a local business.</p>
+          <span class="tag">Fashion</span>
+          <p class="price">$500</p>
+          <p class="deadline">Deadline: 2024-03-15</p>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+      </div>
+      
+      <!-- Задача 2 Онлайн -->
+      <div class="task">
+        <img src="contentwriting.png" alt="Content Writing">
+        <div class="task-details">
+          <h3>Content Writing</h3>
+          <p>Write engaging blog posts on various tech topics.</p>
+          <span class="tag">Technology</span>
+          <p class="price">$300</p>
+          <p class="deadline">Deadline: 2024-03-20</p>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Раздел Оффлайн задач -->
+    <section id="offline-tasks" class="offline">
+      <h2>Offline Tasks</h2>
+      
+      <!-- Задача 1 Оффлайн -->
+      <div class="task">
+        <img src="photography.png" alt="Local Event Photography">
+        <div class="task-details">
+          <h3>Local Event Photography</h3>
+          <p>Capture photos at a community event in downtown.</p>
+          <span class="tag">IT Fest</span>
+          <p class="price">$350</p>
+          <p class="deadline">Deadline: 2024-03-15</p>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+      </div>
+      
+      <!-- Задача 2 Оффлайн -->
+      <div class="task">
+        <img src="gardening.png" alt="Garden Landscaping">
+        <div class="task-details">
+          <h3>Garden Landscaping</h3>
+          <p>Design and implement a garden landscape for a residential property.</p>
+          <span class="tag">Home Improvement</span>
+          <p class="price">$200</p>
+          <p class="deadline">Deadline: 2024-03-10</p>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+      </div>
+
+      <!-- Задача 3 Оффлайн -->
+      <div class="task">
+        <img src="delivery.png" alt="Package Delivery">
+        <div class="task-details">
+          <h3>Package Delivery</h3>
+          <p>Deliver packages within the city area.</p>
+          <span class="tag">Logistics</span>
+          <p class="price">$150</p>
+          <p class="deadline">Deadline: 2024-03-12</p>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+      </div>
+      
+      <!-- Задача 4 Оффлайн -->
+      <div class="task">
+        <img src="painting.png" alt="House Painting">
+        <div class="task-details">
+          <h3>House Painting</h3>
+          <p>Paint the interior walls of a small house.</p>
+          <span class="tag">Home Services</span>
+          <p class="price">$400</p>
+          <p class="deadline">Deadline: 2024-03-18</p>
+          <button class="apply-btn">Apply Now</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const applyButtons = document.querySelectorAll('.apply-btn');
+        applyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const taskTitle = button.parentElement.querySelector('h3').innerText;
+                alert(`You have applied for: ${taskTitle}`);
+            });
+        });
+    });
+  </script>
+</body>
+</html>

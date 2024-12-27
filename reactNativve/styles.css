@@ -1,0 +1,38 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+  height: 400px;
+}
+
+/* Cards */
+.card {
+  box-shadow: 0 4px 8px #6A0DAD(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+/* Фон сайта */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6A5ACD; /* Приятный фиолетовый цвет */
+  color: white; /* Цвет текста для контраста */
+  margin: 0;
+  padding: 0;
+}
+
+/* Адаптация других секций */
+.hero {
+  background-color: #836FFF; /* Светлее для секции Hero */
+  color: white;
+}
+
+footer {
+  background-color: #4B0082; /* Темнее для контраста в футере */
+}

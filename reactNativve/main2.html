@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhedel Usta</title>
+
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Стили круглой кнопки */
+    .user-btn {
+      width: 40px; /* Ширина кнопки */
+      height: 40px; /* Высота кнопки */
+      border-radius: 50%; /* Делаем кнопку круглой */
+      background-color: #f0f0f0; /* Светлый фон */
+      border: 2px solid #ccc; /* Легкая граница */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+      transition: transform 0.2s, background-color 0.3s;
+      cursor: pointer;
+    }
+
+    /* Иконка внутри кнопки */
+    .user-btn i {
+      font-size: 30px; /* Размер иконки */
+      color: #555; /* Цвет иконки */
+    }
+
+    /* Эффект при наведении */
+    .user-btn:hover {
+      background-color: #e0e0e0; /* Меняем цвет фона */
+      transform: scale(1.1); /* Легкое увеличение кнопки */
+    }
+
+    /* Анимация при нажатии */
+    .user-btn:active {
+      transform: scale(0.95); /* Легкий эффект нажатия */
+    }
+  </style>
+<body>
+  <!-- Header -->
+  <header class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo fs-3">Zhedel Usta</div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="#" class="nav-link text-white">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">Explore</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">Become a Employer</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link text-white">Sign out</a></li>
+          <a href="profile.html"class="user-btn">User</a>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<!-- Кнопка, ведущая на страницу логина -->
+<h1 align="center">Welcome to our platform!</h1>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <h2 class="mb-4">Explore Categories</h2>
+        <div class="d-flex overflow-auto">
+            <div class="card me-3" style="min-width: 200px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Headshot Photographers</h5>
+                </div>
+            </div>
+            <div class="card me-3" style="min-width: 200px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Fashion Photographers</h5>
+                </div>
+            </div>
+            <div class="card me-3" style="min-width: 200px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Photographers in New York</h5>
+                </div>
+            </div>
+            <div class="card me-3" style="min-width: 200px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Interior Design Photographers</h5>
+                </div>
+            </div>
+            <div class="card me-3" style="min-width: 200px;">
+              <div class="card-body text-center">
+                  <h5 class="card-title">Business & Finance</h5>
+              </div>
+          </div>
+          <div class="card me-3" style="min-width: 200px;">
+            <div class="card-body text-center">
+                <h5 class="card-title">Video & Animation
+                </h5>
+            </div>
+        </div>
+        <div class="card me-3" style="min-width: 200px;">
+          <div class="card-body text-center">
+              <h5 class="card-title">Programming & Tech</h5>
+          </div>
+      </div>
+        </div>
+    </div>
+
+
+
+  <!-- Hero Section -->
+<section class="hero text-white text-center py-5" style="position: relative; background-image: url('banner4.jpg'); background-size: cover; background-position: center;">
+  <!-- Overlay -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+  
+  <div class="container" style="position: relative; z-index: 2;">
+    <h1 class="display-4" style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);">
+      Monetize Your Skills or Find Top Specialists with Ease!
+    </h1>
+    <form class="search-bar mt-4 d-flex justify-content-center">
+      <input type="text" class="form-control w-50 me-2" placeholder="What service are you looking for?" />
+      <button class="btn btn-success">Search</button>
+    </form>
+  </div>
+</section>
+ 
+
+
+
+<div style="text-align: center; margin-top: 30px;">
+  <button style="
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  " 
+  onclick="window.location.href='/createtask1.html'">
+    🚀 Let's Get Started!
+  </button>
+  <p style="margin-top: 10px; font-size: 14px; color: #555;">Click to create your first task and find top freelancers!</p>
+</div>
+
+
+
+
+ <!-- Popular Services -->
+<section class="popular-services py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Popular Services</h2>
+
+    <!-- Carousel -->
+    <div id="popularServicesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row text-center">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="logo.jpeg" class="card-img-top" alt="Logo Design" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Logo Design</h5>
+                  <p class="card-text">Starting at $5</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="seo.jpeg" class="card-img-top" alt="SEO Services" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">SEO Services</h5>
+                  <p class="card-text">Starting at $10</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="content.jpeg" class="card-img-top" alt="Content Writing" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Content Writing</h5>
+                  <p class="card-text">Starting at $8</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="media.png" class="card-img-top" alt="Social Media Marketing" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Social Media Marketing</h5>
+                  <p class="card-text">Starting at $15</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add more slides -->
+        <div class="carousel-item">
+          <div class="row text-center">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="warehouse.jpg" class="card-img-top" alt="warehouse" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Warehouse Worker</h5>
+                  <p class="card-text">Starting at $7</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="cashier.jpg" class="card-img-top" alt="cashier" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">cashier</h5>
+                  <p class="card-text">Starting at $12</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="coach.jpeg" class="card-img-top" alt="coach" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Coach</h5>
+                  <p class="card-text">Starting at $20</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="garden.jpg" class="card-img-top" alt="garden" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Garden Works</h5>
+                  <p class="card-text">Starting at $18</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#popularServicesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#popularServicesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<h2 align="center">Что такое zhedel_usta?</h2>
+<a>Zhedel Usta — это платформа для быстрого поиска подработок, предлагающая онлайн и оффлайн задания. Она помогает людям зарабатывать без опыта и портфолио, используя персонализированные AI-рекомендации. Платформа удобна для студентов, пенсионеров и новичков, обеспечивая гибкость и простоту в выполнении задач.</a>
+    <div id="video-block" class="shorts-container">
+        <iframe 
+            src="https://www.youtube.com/embed/yZ6iR8qpPns?si=3cijqIRuSAKZ1Zdl&autoplay=0&mute=0&loop=0&controls=1&modestbranding=1&playsinline=1" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+
+
+ <!-- Footer Section -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Categories -->
+        <div class="col-md-3">
+          <h5>Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-white">Online & Offline</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Graphics & Design</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Digital Marketing</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Writing & Translation</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Video & Animation</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Programming & Tech</a></li>
+          </ul>
+        </div>
+  
+        <!-- About -->
+        <div class="col-md-3">
+          <h5>About</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-white">Careers</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Press & News</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Partnerships</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Terms of Service</a></li>
+          </ul>
+        </div>
+  
+        <!-- Support -->
+        <div class="col-md-3">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-white">Help & Support</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Trust & Safety</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Employer on Zhedel Usta</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Working on Zhedel Usta</a></li>
+          </ul>
+        </div>
+  
+        <!-- Community -->
+        <div class="col-md-3">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-white">Customer Success Stories</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Community Hub</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Forum</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Events</a></li>
+            <li><a href="#" class="text-decoration-none text-white">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <a href="https://www.instagram.com/zhedel_usta/profilecard/?igsh=MTB5aGExd2o1amV3" class="btn btn-outline-light btn-sm me-2" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="https://youtu.be/yZ6iR8qpPns?si=Ao8MoiuxPFjMKuFn" class="btn btn-outline-light btn-sm me-2" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+          <a href="https://web.telegram.org/k/#@Abaybabay7" class="btn btn-outline-light btn-sm" target="_blank">
+            <i class="fab fa-telegram"></i> Telegram
+          </a>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="row mt-3">
+        <div class="col text-center">
+          <p class="mb-0">© 2024 zhedel_usta Ltd.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Include FontAwesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

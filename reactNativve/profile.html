@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f4f4f9, #e0e7ff);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .profile-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #007bff;
+    }
+
+    header h1 {
+      margin-top: 15px;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    #upload-pic {
+      display: none;
+    }
+
+    .upload-label {
+      cursor: pointer;
+      color: #007bff;
+      font-size: 14px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #444;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: #007bff;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    input, select, button {
+      font-size: 1rem;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .portfolio img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin: 5px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .ai-helper button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ai-helper button i {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <header>
+      <h1>User Profile</h1>
+      <img id="profile-pic" src="default-profile.png" alt="Profile Picture">
+      <label for="upload-pic" class="upload-label"><i class="fas fa-upload"></i> Upload Photo</label>
+      <input type="file" id="upload-pic" accept="image/*">
+    </header>
+    <section class="info">
+      <h2><i class="fas fa-user"></i> Personal Information</h2>
+      <p><strong>Name:</strong> <span id="user-name">John Doe</span></p>
+      <p><strong>Date of Birth:</strong> <input type="date" id="dob"></p>
+      <p><strong>Privacy Settings:</strong> 
+        <select id="privacy-settings">
+          <option value="public">Public</option>
+          <option value="private">Private</option>
+        </select>
+      </p>
+    </section>
+    <section class="earnings">
+      <h2><i class="fas fa-wallet"></i> Earnings</h2>
+      <p><strong>Total Earned:</strong> $<span id="earnings">0</span></p>
+      <button id="add-money"><i class="fas fa-plus-circle"></i> Add Earnings</button>
+    </section>
+    <section class="portfolio">
+      <h2><i class="fas fa-briefcase"></i> Portfolio</h2>
+      <p>Upload your work:</p>
+      <input type="file" id="portfolio-upload" multiple>
+      <div id="portfolio-list"></div>
+    </section>
+    <section class="ai-helper">
+      <h2><i class="fas fa-robot"></i> Find Your Direction</h2>
+      <button id="ai-helper-btn"><i class="fas fa-lightbulb"></i> Get Suggestions from AI</button>
+      <p id="ai-response"></p>
+    </section>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const profilePicInput = document.getElementById("upload-pic");
+      const profilePic = document.getElementById("profile-pic");
+      const earningsSpan = document.getElementById("earnings");
+      const addMoneyBtn = document.getElementById("add-money");
+      const portfolioUpload = document.getElementById("portfolio-upload");
+      const portfolioList = document.getElementById("portfolio-list");
+      const aiHelperBtn = document.getElementById("ai-helper-btn");
+      const aiResponse = document.getElementById("ai-response");
+
+      // Change profile picture
+      profilePicInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            profilePic.src = reader.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Add earnings
+      addMoneyBtn.addEventListener("click", () => {
+        const currentEarnings = parseFloat(earningsSpan.textContent);
+        const additionalEarnings = parseFloat(prompt("Enter amount to add:", "0"));
+        if (!isNaN(additionalEarnings)) {
+          earningsSpan.textContent = (currentEarnings + additionalEarnings).toFixed(2);
+        }
+      });
+
+      // Upload portfolio
+      portfolioUpload.addEventListener("change", (event) => {
+        const files = event.target.files;
+        portfolioList.innerHTML = ""; // Clear existing items
+        Array.from(files).forEach((file) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const img = document.createElement("img");
+            img.src = reader.result;
+            portfolioList.appendChild(img);
+          };
+          reader.readAsDataURL(file);
+        });
+      });
+
+      // AI Helper
+      aiHelperBtn.addEventListener("click", () => {
+        aiResponse.textContent = "Analyzing your preferences... Suggesting new directions!";
+        setTimeout(() => {
+          aiResponse.textContent = "You might excel in Data Science or Creative Design. Explore more!";
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>
